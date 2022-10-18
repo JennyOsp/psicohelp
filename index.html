@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/bootstrap-styles.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,39 +26,64 @@
     <title>Psicohelp</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <h1 class="navbar__logo">Psicohelp</h1>
-        <ul class="navbar__list">
-          <li><a class="navbar__item" href="index.html">Inicio</a></li>
-          <li>
-            <a class="navbar__item" href="pages/how-works.html"
-              >Como Funciona</a
-            >
-          </li>
-          <li>
-            <a class="navbar__item" href="pages/treatments.html"
-              >Tratamientos</a
-            >
-          </li>
-          <li>
-            <a class="navbar__item" href="pages/therapies.html">Terapias</a>
-          </li>
-        </ul>
-        <a class="navbar__button" href="pages/contact.html">Escríbeme</a>
+    <header class="pt-3">
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="#">Psicohelp</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse d-md-flex justify-content-center" id="navbarNav">
+            <ul class="navbar-nav w-75 d-md-flex justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/how-works.html"
+                  >Como Funciona</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/treatments.html"
+                  >Tratamientos</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pages/therapies.html">Terapias</a>
+              </li>
+              <li class="nav-item d-block d-md-none">
+                <a class="nav-link" href="pages/contact.html">Escríbeme</a>
+              </li>
+
+              <a class="button d-none d-md-block" href="contact.html">Escríbeme</a>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <div class="jumbotron" id="jumbotron">
-        <h1 class="jumbotron__title">Un lugar indicado para tu paz</h1>
+      <div class="container-fluid d-flex justify-content-center py-5">
+        <h1 class="text-header">Un lugar indicado para tu paz</h1>
       </div>
 
-      <section class="intro">
-        <div class="intro__content">
-          <div class="intro__container">
-            <i class="intro__icon fa-solid fa-person-half-dress"></i>
-            <div>
+      <section
+        class="container-fluid row d-flex align-items-center justify-content-center pt-5"
+      >
+        <div class="pb-5 col-sm col-lg-8 w-auto">
+          <div class="row d-flex align-items-center">
+            <i class="col-1 me-3 pb-3 icon fa-solid fa-person-half-dress"></i>
+            <div class="col">
               <h2 class="intro__subtitle">Sesiones a tu medida</h2>
               <p class="intro__text">
                 Cada una es diferente, utilizamos herramientas especificas para
@@ -58,9 +91,9 @@
               </p>
             </div>
           </div>
-          <div class="intro__container">
-            <i class="intro__icon fa-solid fa-person-half-dress"></i>
-            <div>
+          <div class="row d-flex align-items-center">
+            <i class="col-1 me-3 pb-3 icon fa-solid fa-person-half-dress"></i>
+            <div class="col">
               <h2 class="intro__subtitle">Sesiones a tu medida</h2>
               <p class="intro__text">
                 Cada una es diferente, utilizamos herramientas especificas para
@@ -68,9 +101,9 @@
               </p>
             </div>
           </div>
-          <div class="intro__container">
-            <i class="intro__icon fa-solid fa-person-half-dress"></i>
-            <div>
+          <div class="row d-flex align-items-center">
+            <i class="col-1 me-3 pb-3 icon fa-solid fa-person-half-dress"></i>
+            <div class="col">
               <h2 class="intro__subtitle">Sesiones a tu medida</h2>
               <p class="intro__text">
                 Cada una es diferente, utilizamos herramientas especificas para
@@ -80,9 +113,9 @@
           </div>
         </div>
 
-        <figure>
+        <figure class="col-sm col-lg-4">
           <img
-            class="intro__image"
+            class="img-fluid rounded-5 border border-2 border-dark"
             src="https://i.picsum.photos/id/885/400/400.jpg?hmac=v75VLk67mKnHmkorr3_6B-7xtrh4zdu9yMXAVz72vVo"
             alt="random_image"
           />
@@ -91,25 +124,33 @@
     </main>
 
     <footer>
-      <div class="footer__container">
-        <ul class="footer__list">
+      <div class="container-fluid w-auto">
+        <ul
+          class="text-center mb-0 py-3 px-md-5 d-sm-flex justify-content-between"
+        >
           <li>
-            <p class="footer__text">
+            <p>
               <i class="fa-brands fa-whatsapp"></i>
               +57 123456789
             </p>
           </li>
           <li>
-            <p class="footer__text">&copy; Psicohelp 2022</p>
-          </li>
-          <li>
-            <p class="footer__text">
+            <p>
               <i class="fa-brands fa-instagram"></i>
               @jennypsicohumanista
             </p>
           </li>
+          <li>
+            <p class="mb-0">&copy; Psicohelp 2022</p>
+          </li>
         </ul>
       </div>
     </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
