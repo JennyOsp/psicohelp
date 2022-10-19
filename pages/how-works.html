@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap-styles.css" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap -->
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -16,35 +24,66 @@
     <title>Psicohelp</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <h1 class="navbar__logo">Psicohelp</h1>
-        <ul class="navbar__list">
-          <li><a class="navbar__item" href="../index.html">Inicio</a></li>
-          <li>
-            <a class="navbar__item" href="how-works.html">Como Funciona</a>
-          </li>
-          <li>
-            <a class="navbar__item" href="treatments.html">Tratamientos</a>
-          </li>
-          <li>
-            <a class="navbar__item" href="therapies.html">Terapias</a>
-          </li>
-        </ul>
-        <a class="navbar__button" href="contact.html">Escríbeme</a>
+    <header class="pt-3">
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="#">Psicohelp</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse d-xl-flex justify-content-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav w-75 d-lg-flex justify-content-between">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="how-works.html">Como Funciona</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="treatments.html">Tratamientos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="therapies.html">Terapias</a>
+              </li>
+              <li class="nav-item d-block d-md-none">
+                <a class="nav-link" href="contact.html">Escríbeme</a>
+              </li>
+
+              <a class="button d-none d-md-block" href="contact.html"
+                >Escríbeme</a
+              >
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section class="how-work">
-        <h2 class="how-work__title">¿Cómo funciona?</h2>
-        <div class="how-work__content">
-          <div class="how-work__container">
-            <div class="how-work__subtitle">
-              <i class="how-work__icon fa-solid fa-laptop"></i>
-              <h3>Citas virtuales</h3>
+    <main class="how-work d-flex justify-content-center align-items-center">
+      <section class="container-fluid py-4 row justify-content-xl-evenly align-items-md-center">
+        <h2 class="py-4 fw-bold text-center col-md col-xl-2">¿Cómo funciona?</h2>
+        <div class="col-md col-xl-4">
+          <div class="mb-md-5">
+            <div class="d-flex align-items-center">
+              <i class="pb-2 me-2 fa-solid fa-laptop"></i>
+              <h3 class="fw-bold">Citas virtuales</h3>
             </div>
-            <p class="how-work__text">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptas, quae, quod, voluptates quibusdam voluptatibus quidem
               voluptatum quos quia quas nesciunt. Quisquam, quae. Quisquam
@@ -52,12 +91,12 @@
               voluptatum quos quia quas nesciunt. Quisquam, quae.
             </p>
           </div>
-          <div class="how-work__container how-work__container--margin">
-            <div class="how-work__subtitle">
-              <i class="how-work__icon fa-regular fa-comments"></i>
-              <h3>Citas presenciales</h3>
+          <div class="mt-4">
+            <div class="d-flex align-items-center">
+              <i class="pb-2 me-2 fa-regular fa-comments"></i>
+              <h3 class="fw-bold">Citas presenciales</h3>
             </div>
-            <p class="how-work__text">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               voluptas, quae, quod, voluptates quibusdam voluptatibus quidem
               voluptatum quos quia quas nesciunt. Quisquam, quae. Quisquam
@@ -70,25 +109,33 @@
     </main>
 
     <footer>
-      <div class="footer__container">
-        <ul class="footer__list">
+      <div class="container-fluid w-auto">
+        <ul
+          class="text-center mb-0 py-3 px-md-5 d-sm-flex justify-content-between"
+        >
           <li>
-            <p class="footer__text">
+            <p>
               <i class="fa-brands fa-whatsapp"></i>
               +57 123456789
             </p>
           </li>
           <li>
-            <p class="footer__text">&copy; Psicohelp 2022</p>
-          </li>
-          <li>
-            <p class="footer__text">
+            <p>
               <i class="fa-brands fa-instagram"></i>
               @jennypsicohumanista
             </p>
           </li>
+          <li>
+            <p class="mb-0">&copy; Psicohelp 2022</p>
+          </li>
         </ul>
       </div>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
